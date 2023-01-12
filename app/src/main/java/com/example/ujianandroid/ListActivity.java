@@ -19,15 +19,19 @@ public class ListActivity extends AppCompatActivity {
 
         ListView lvNama = (ListView) findViewById(R.id.lvNama);
 
-        ArrayList<String> daftar_nama = getIntent().getExtras().getStringArrayList("daftar_nama");
+                ArrayList<String> daftar_nama = getIntent().getExtras().getStringArrayList("daftar_nama");
+
 
         if(daftar_nama.isEmpty()){
             daftar_nama.add("data masih kosong");
+
         }
 
         ArrayAdapter<String> ad_nama = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, daftar_nama);
 
+
         lvNama.setAdapter(ad_nama);
+
 
     }
 }
